@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,327 +10,94 @@
 <title>KRYVON | Streetwear Essentials</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080808;color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+header{
+min-height:75px;padding:18px 7%;
+display:flex;justify-content:space-between;
+align-items:center;border-bottom:1px solid #292929;
+background:rgba(8,8,8,.97);position:sticky;top:0;z-index:100
 }
+.logo{font-size:27px;font-weight:900;letter-spacing:4px}
+.logo span{color:#aaa}
+nav{display:flex;gap:23px;font-size:11px;letter-spacing:1px}
+nav a:hover{color:#aaa}
 
-html {
-  scroll-behavior: smooth;
+.hero{
+min-height:570px;padding:90px 8%;
+display:flex;flex-direction:column;justify-content:center;
+background:radial-gradient(ellipse at 50% 50%,#292929,#151515 40%,#080808 80%)
 }
+.eyebrow{color:#aaa;font-size:12px;letter-spacing:5px;margin-bottom:25px}
+.hero h1{font-size:clamp(55px,12vw,115px);line-height:.95;font-weight:900;letter-spacing:-5px}
+.hero p{color:#aaa;font-size:14px;line-height:1.8;max-width:390px;margin-top:25px}
 
-body {
-  background: #080808;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+.btn{
+display:inline-block;width:fit-content;padding:15px 27px;
+margin-top:28px;border:1px solid white;border-radius:30px;
+font-size:11px;font-weight:bold;letter-spacing:1px;transition:.3s
 }
+.btn:hover{background:white;color:black}
 
-a {
-  color: inherit;
-  text-decoration: none;
+.features{
+display:grid;grid-template-columns:repeat(3,1fr);
+padding:30px 5%;border-top:1px solid #292929;
+border-bottom:1px solid #292929;text-align:center;gap:15px
 }
+.feature h3{font-size:12px;letter-spacing:2px}
+.feature p{font-size:10px;color:#888;margin-top:9px}
 
-header {
-  min-height: 75px;
-  padding: 18px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #292929;
-  background: rgba(8,8,8,.97);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+section{padding:85px 7%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:29px;letter-spacing:4px}
+.section-title p{color:#888;font-size:11px;letter-spacing:2px;margin-top:13px}
+
+.products{
+display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+gap:22px;max-width:950px;margin:auto
 }
+.product{background:#141414;border:1px solid #292929;padding:13px;transition:.3s}
+.product:hover{transform:translateY(-5px);border-color:#777}
+.product-art{width:100%;aspect-ratio:1/1;overflow:hidden;background:#202020}
+.product-photo{width:100%;height:100%;object-fit:contain;display:block}
+.product-info{padding:19px 5px 10px}
+.product-info h3{font-size:15px;letter-spacing:1px}
+.product-info p{color:#999;font-size:12px;margin-top:10px;line-height:1.6}
+.price{font-size:20px;font-weight:bold;margin-top:16px}
+.product .btn{margin-top:18px;padding:12px 18px}
 
-.logo {
-  font-size: 27px;
-  font-weight: 900;
-  letter-spacing: 4px;
+.custom{text-align:center;background:#121212}
+.custom h2{font-size:clamp(27px,6vw,42px);letter-spacing:3px}
+.custom p{color:#aaa;font-size:13px;line-height:1.9;margin-top:20px}
+.custom-price{font-size:27px;font-weight:bold;margin-top:20px}
+
+.instagram{text-align:center}
+footer{padding:40px 7%;text-align:center;border-top:1px solid #292929}
+footer strong{font-size:24px;letter-spacing:4px}
+footer p{color:#777;font-size:11px;margin-top:13px;letter-spacing:1px}
+
+@media(max-width:600px){
+header{padding:17px 5%}
+.logo{font-size:21px;letter-spacing:3px}
+nav{gap:10px;font-size:9px}
+.hero{min-height:500px;padding:70px 7%}
+.hero h1{letter-spacing:-3px}
+section{padding:65px 5%}
+.features{padding:25px 3%;gap:8px}
+.feature h3{font-size:9px;letter-spacing:1px}
+.feature p{font-size:9px}
+.products{gap:12px}
+.product{padding:8px}
+.product-info h3{font-size:12px}
+.product-info p{font-size:10px}
+.product .btn{padding:11px 10px;font-size:9px}
 }
-
-.logo span {
-  color: #aaa;
-}
-
-nav {
-  display: flex;
-  gap: 23px;
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
-nav a:hover {
-  color: #aaa;
-}
-
-.hero {
-  min-height: 570px;
-  padding: 90px 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background:
-  radial-gradient(ellipse at 50% 50%, #292929, #151515 40%, #080808 80%);
-}
-
-.eyebrow {
-  color: #aaa;
-  font-size: 12px;
-  letter-spacing: 5px;
-  margin-bottom: 25px;
-}
-
-.hero h1 {
-  font-size: clamp(55px, 12vw, 115px);
-  line-height: .95;
-  font-weight: 900;
-  letter-spacing: -5px;
-}
-
-.hero p {
-  color: #aaa;
-  font-size: 14px;
-  line-height: 1.8;
-  max-width: 390px;
-  margin-top: 25px;
-}
-
-.btn {
-  display: inline-block;
-  width: fit-content;
-  padding: 15px 27px;
-  margin-top: 28px;
-  border: 1px solid white;
-  border-radius: 30px;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: .3s;
-}
-
-.btn:hover {
-  background: white;
-  color: black;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  padding: 30px 5%;
-  border-top: 1px solid #292929;
-  border-bottom: 1px solid #292929;
-  text-align: center;
-  gap: 15px;
-}
-
-.feature h3 {
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-.feature p {
-  font-size: 10px;
-  color: #888;
-  margin-top: 9px;
-}
-
-section {
-  padding: 85px 7%;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title h2 {
-  font-size: 29px;
-  letter-spacing: 4px;
-}
-
-.section-title p {
-  color: #888;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-top: 13px;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 22px;
-  max-width: 950px;
-  margin: auto;
-}
-
-.product {
-  background: #141414;
-  border: 1px solid #292929;
-  padding: 13px;
-  transition: .3s;
-}
-
-.product:hover {
-  transform: translateY(-5px);
-  border-color: #777;
-}
-
-.product-art {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: #202020;
-}
-
-.product-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.product-info {
-  padding: 19px 5px 10px;
-}
-
-.product-info h3 {
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-.product-info p {
-  color: #999;
-  font-size: 12px;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 16px;
-}
-
-.product .btn {
-  margin-top: 18px;
-  padding: 12px 18px;
-}
-
-.custom {
-  text-align: center;
-  background: #121212;
-}
-
-.custom h2 {
-  font-size: clamp(27px,6vw,42px);
-  letter-spacing: 3px;
-}
-
-.custom p {
-  color: #aaa;
-  font-size: 13px;
-  line-height: 1.9;
-  margin-top: 20px;
-}
-
-.instagram {
-  text-align: center;
-}
-
-footer {
-  padding: 40px 7%;
-  text-align: center;
-  border-top: 1px solid #292929;
-}
-
-footer strong {
-  font-size: 24px;
-  letter-spacing: 4px;
-}
-
-footer p {
-  color: #777;
-  font-size: 11px;
-  margin-top: 13px;
-  letter-spacing: 1px;
-}
-
-@media(max-width:600px) {
-  header {
-    padding: 17px 5%;
-  }
-
-  .logo {
-    font-size: 21px;
-    letter-spacing: 3px;
-  }
-
-  nav {
-    gap: 10px;
-    font-size: 9px;
-  }
-
-  .hero {
-    min-height: 500px;
-    padding: 70px 7%;
-  }
-
-  .hero h1 {
-    letter-spacing: -3px;
-  }
-
-  section {
-    padding: 65px 5%;
-  }
-
-  .features {
-    padding: 25px 3%;
-    gap: 8px;
-  }
-
-  .feature h3 {
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
-
-  .feature p {
-    font-size: 9px;
-  }
-
-  .products {
-    gap: 12px;
-  }
-
-  .product {
-    padding: 8px;
-  }
-
-  .product-info h3 {
-    font-size: 12px;
-  }
-
-  .product-info p {
-    font-size: 10px;
-  }
-
-  .product .btn {
-    padding: 11px 10px;
-    font-size: 9px;
-  }
-}
-
-@media(max-width:350px) {
-  nav {
-    gap: 6px;
-    font-size: 8px;
-  }
-
-  .products {
-    grid-template-columns: 1fr;
-  }
+@media(max-width:350px){
+nav{gap:6px;font-size:8px}
+.products{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -337,175 +105,119 @@ footer p {
 <body>
 
 <header>
-  <a href="#home" class="logo">KRYVON<span>.</span></a>
-
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#shop">SHOP</a>
-    <a href="#custom">CUSTOM</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+<a href="#home" class="logo">KRYVON<span>.</span></a>
+<nav>
+<a href="#home">HOME</a>
+<a href="#shop">SHOP</a>
+<a href="#custom">CUSTOM</a>
+<a href="#contact">CONTACT</a>
+</nav>
 </header>
 
 <main>
 
 <section class="hero" id="home">
-  <div class="eyebrow">STREETWEAR ESSENTIALS</div>
-
-  <h1>NOTHING<br>ORDINARY.</h1>
-
-  <p>
-    Make your own statement.
-    Discover premium streetwear essentials
-    designed for those who refuse to blend in.
-  </p>
-
-  <a href="#shop" class="btn">
-    EXPLORE COLLECTION →
-  </a>
+<div class="eyebrow">STREETWEAR ESSENTIALS</div>
+<h1>NOTHING<br>ORDINARY.</h1>
+<p>
+Make your own statement.
+Discover premium streetwear essentials
+designed for those who refuse to blend in.
+</p>
+<a href="#shop" class="btn">EXPLORE COLLECTION →</a>
 </section>
 
 <div class="features">
-
-  <div class="feature">
-    <h3>PREMIUM QUALITY</h3>
-    <p>Made for everyday wear</p>
-  </div>
-
-  <div class="feature">
-    <h3>OVERSIZED FIT</h3>
-    <p>Modern streetwear style</p>
-  </div>
-
-  <div class="feature">
-    <h3>YOUR IDENTITY</h3>
-    <p>Make it personal</p>
-  </div>
-
+<div class="feature">
+<h3>PREMIUM QUALITY</h3>
+<p>Made for everyday wear</p>
+</div>
+<div class="feature">
+<h3>OVERSIZED FIT</h3>
+<p>Modern streetwear style</p>
+</div>
+<div class="feature">
+<h3>YOUR IDENTITY</h3>
+<p>Make it personal</p>
+</div>
 </div>
 
 <section id="shop">
+<div class="section-title">
+<h2>THE COLLECTION</h2>
+<p>BUILT DIFFERENT. WORN DIFFERENT.</p>
+</div>
 
-  <div class="section-title">
-    <h2>THE COLLECTION</h2>
-    <p>BUILT DIFFERENT. WORN DIFFERENT.</p>
-  </div>
+<div class="products">
 
-  <div class="products">
+<!-- ACID WASH TEE -->
+<article class="product">
+<div class="product-art">
+<img class="product-photo"
+src="acid-tee-01.png"
+alt="KRYVON Acid Wash Tee">
+</div>
+<div class="product-info">
+<h3>ACID WASH TEE</h3>
+<p>240 GSM · Oversized Fit<br>Premium Charcoal Finish</p>
+<div class="price">₹450</div>
+<a class="btn" href="https://ig.me/m/kryvonlabel">
+DM TO ORDER →
+</a>
+</div>
+</article>
 
-    <!-- PRODUCT 1 -->
+<!-- PREMIUM PLAIN TEE -->
+<article class="product">
+<div class="product-art">
+<img class="product-photo"
+src="plain-tees.webp"
+alt="KRYVON Premium Plain Tees">
+</div>
+<div class="product-info">
+<h3>PREMIUM PLAIN TEE</h3>
+<p>Black · Cream · White<br>Oversized Fit · Sizes S / M</p>
+<div class="price">₹450</div>
+<a class="btn" href="https://ig.me/m/kryvonlabel">
+CHOOSE YOUR COLOR →
+</a>
+</div>
+</article>
 
-    <article class="product">
-
-      <div class="product-art">
-        <img
-          class="product-photo"
-          src="acid-wash.png"
-          alt="KRYVON Acid Wash Tee">
-      </div>
-
-      <div class="product-info">
-        <h3>ACID WASH TEE</h3>
-
-        <p>
-          240 GSM · Oversized Fit<br>
-          Premium Charcoal Finish
-        </p>
-
-        <div class="price">₹450</div>
-
-        <a
-          class="btn"
-          href="https://ig.me/m/kryvonlabel">
-          DM TO ORDER →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- PRODUCT 2 -->
-
-    <article class="product">
-
-      <div class="product-art">
-        <img
-          class="product-photo"
-          src="plain-tees.webp"
-          alt="KRYVON Plain Tee Collection">
-      </div>
-
-      <div class="product-info">
-        <h3>PREMIUM PLAIN TEE</h3>
-
-        <p>
-          Black · Cream · White<br>
-          Oversized Fit · Sizes S / M
-        </p>
-
-        <div class="price">₹699</div>
-
-        <a
-          class="btn"
-          href="https://ig.me/m/kryvonlabel">
-          CHOOSE YOUR COLOR →
-        </a>
-      </div>
-
-    </article>
-
-  </div>
-
+</div>
 </section>
 
 <section class="custom" id="custom">
-
-  <h2>YOUR STYLE. YOUR RULES.</h2>
-
-  <p>
-    Choose your own print and create something unique.<br>
-    Make your everyday streetwear personal.
-  </p>
-
-  <a
-    class="btn"
-    href="https://ig.me/m/kryvonlabel">
-    START CUSTOMIZING →
-  </a>
-
+<h2>YOUR STYLE. YOUR RULES.</h2>
+<p>
+Choose your own print and create something unique.<br>
+Make your everyday streetwear personal.
+</p>
+<div class="custom-price">₹699</div>
+<p>CUSTOMISED TEE</p>
+<a class="btn" href="https://ig.me/m/kryvonlabel">
+START CUSTOMIZING →
+</a>
 </section>
 
 <section class="instagram" id="contact">
-
-  <div class="section-title">
-
-    <h2>FOLLOW THE MOVEMENT.</h2>
-
-    <p>
-      Follow KRYVON on Instagram for new drops and updates.
-    </p>
-
-    <a
-      class="btn"
-      href="https://www.instagram.com/kryvonlabel/"
-      target="_blank"
-      rel="noopener">
-      INSTAGRAM @KRYVONLABEL →
-    </a>
-
-  </div>
-
+<div class="section-title">
+<h2>FOLLOW THE MOVEMENT.</h2>
+<p>Follow KRYVON on Instagram for new drops and updates.</p>
+<a class="btn"
+href="https://www.instagram.com/kryvonlabel/"
+target="_blank" rel="noopener">
+INSTAGRAM @KRYVONLABEL →
+</a>
+</div>
 </section>
 
 </main>
 
 <footer>
-
-  <strong>KRYVON</strong>
-
-  <p>NOTHING ORDINARY.</p>
-
-  <p>© 2026 KRYVON. All rights reserved.</p>
-
+<strong>KRYVON</strong>
+<p>NOTHING ORDINARY.</p>
+<p>© 2026 KRYVON. All rights reserved.</p>
 </footer>
 
 </body>
